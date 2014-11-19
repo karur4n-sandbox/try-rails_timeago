@@ -1,0 +1,8 @@
+<% @posts.each do |post| %>
+  <div>
+    <ul>
+      <li><%= post.title %></li>
+      <li><%= post.author %></li>
+      <li><%= timeago_tag(post.created_at, nojs: true, :lang => :ja) %></li>
+  </div>
+<% end %>
